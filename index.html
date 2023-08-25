@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>         -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
+
+        <title>Coming Soon</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body onload="set_random_video()">
+        <div class="container">
+            <div class="background">
+                <video id="background_vid" src="media/vid2.mp4" muted autoplay loop></video>
+            </div>
+
+            <h1>Coming soon...</h1>
+
+            <div class="sm">
+                <a href="https://x.com/text2motion"><i class="fa-brands fa-threads"></i></a>
+                <a href="https://x.com/text2motion"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/text2motion/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <script>
+            const videos = [
+                "media/vid1.mp4",
+                "media/vid2.mp4"
+            ];
+
+            function set_random_video() {
+                const random_index = Math.round(Math.random() * videos.length);
+                const selected_video = videos[random_index - 1];
+                document.getElementById('background_vid').src = `${selected_video}`;
+            }
+        </script>
+    </body>
+</html>
