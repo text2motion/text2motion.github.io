@@ -16,15 +16,24 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">        
     </head>
 
     <body onload="set_random_video()">
         <div class="container">
             <div class="background">
-                <video id="background_vid" src="media/vid2.mp4" playsinline muted autoplay loop></video>
+                <video id="background_vid" src="media/vid2.mp4" playsinline muted autoplay onended="set_random_video()"></video>
             </div>
 
             <h1>Coming soon...</h1>
+            <br>
 
             <div class="sm">
                 <a href="https://threads.net/text2motion"><i class="fa-brands fa-threads"></i></a>
@@ -35,7 +44,10 @@
         <script>
             const videos = [
                 "media/vid1.mp4",
-                "media/vid2.mp4"
+                "media/vid2.mp4",
+                "media/vid3.mp4",
+                "media/vid4.mp4",
+                "media/vid5.mp4"
             ];
 
             function set_random_video() {

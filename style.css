@@ -37,6 +37,7 @@ body {
 h1 {
     font-size: 80px;
     margin-bottom: 60px;
+    mix-blend-mode: lighten;
 }
 
 .sm a {
